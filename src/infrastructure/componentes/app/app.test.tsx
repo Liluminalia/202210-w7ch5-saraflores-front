@@ -15,7 +15,7 @@ describe('Given App component', () => {
                     </Provider>
                 </Router>
             );
-            const element = screen.getByText(/Sara Flores/i);
+            const element = screen.getByText(/sara/i);
             expect(element).toBeInTheDocument();
         });
     });
