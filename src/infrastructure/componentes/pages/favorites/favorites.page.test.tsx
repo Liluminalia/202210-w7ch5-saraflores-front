@@ -1,6 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import React from 'react';
+import { Provider } from 'react-redux';
 import { MemoryRouter as Router } from 'react-router-dom';
+import { appStore } from '../../../store/store';
 import FavoritesPage from './favorites.page';
 
 describe('Given Favorites page', () => {
@@ -9,11 +11,13 @@ describe('Given Favorites page', () => {
             render(
                 <>
                     <Router>
-                        <FavoritesPage />
+                        <Provider store={appStore}>
+                            <FavoritesPage />
+                        </Provider>
                     </Router>
                 </>
             );
-            const element = screen.getByText(/sdfsdfsdf/i);
+            const element = screen.getByText(/Robots List/i);
             expect(element).toBeInTheDocument();
         });
     });
