@@ -5,7 +5,7 @@ import DetailsPage from './details.page';
 
 describe('Given Details page', () => {
     describe('When we render the page', () => {
-        test('Then it should display "PVP"', () => {
+        test('Then it should display "Velocidad"', () => {
             render(
                 <>
                     <Router>
@@ -13,7 +13,7 @@ describe('Given Details page', () => {
                     </Router>
                 </>
             );
-            const element = screen.getByText(/PVP/i);
+            const element = screen.getByText(/Velocidad/i);
             expect(element).toBeInTheDocument();
         });
     });
