@@ -4,7 +4,7 @@ import { MemoryRouter as Router } from 'react-router-dom';
 
 describe('Given Layout component', () => {
     describe('When we render the component', () => {
-        test('Then it should display "froilan"', () => {
+    test('Then it should display "froilan"', () => {
             render(
                 <Router>
                     <Layout>
