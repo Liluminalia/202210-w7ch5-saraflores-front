@@ -20,7 +20,7 @@ describe('Given RobotsList component', () => {
             ];
             render(
                 <Router>
-                    <Provider store={appStore} children={undefined}>
+                    <Provider store={appStore}>
                         <RobotsList item={mockList} />
                     </Provider>
                 </Router>
@@ -42,12 +42,12 @@ describe('Given RobotsList component', () => {
 
             render(
                 <Router>
-                    <Provider store={appStore} children={undefined}>
+                    <Provider store={appStore}>
                         <RobotsList item={mockList} />
                     </Provider>
                 </Router>
             );
-            const element = screen.getByAltText(/strasding/i);
+            const element = screen.getByAltText(/imagen de un robot dibujado/i);
             expect(element).toBeInTheDocument();
         });
     });
