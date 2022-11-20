@@ -1,14 +1,25 @@
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter as Router } from 'react-router-dom';
-import { Header } from './header';
+import { Menu } from './menu';
 
-describe('Given Header component', () => {
+describe('Given Menu component', () => {
     describe('When we render the component', () => {
+        test('Then it should display "Favorites"', () => {
+            render(
+                <>
+                    <Router>
+                        <Menu />
+                    </Router>
+                </>
+            );
+            const element = screen.getByText(/Favorites/i);
+            expect(element).toBeInTheDocument();
+        });
         test('Then it should display "Home"', () => {
             render(
                 <>
                     <Router>
-                        <Header />
+                        <Menu />
                     </Router>
                 </>
             );
