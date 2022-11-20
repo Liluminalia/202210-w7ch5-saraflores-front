@@ -22,7 +22,7 @@ describe('Given RobotRepository Service', () => {
             it should return a Promise of an Array of robots`, async () => {
             global.fetch = jest.fn().mockResolvedValue({
                 ok: true,
-                json: jest.fn().mockResolvedValue([]),
+                json: jest.fn().mockResolvedValue({ robots: [] }),
             });
             const result = await service.getAll();
             expect(fetch).toHaveBeenCalled();
