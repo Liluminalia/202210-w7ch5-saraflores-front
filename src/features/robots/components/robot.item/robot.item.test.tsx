@@ -26,7 +26,7 @@ describe('Given RobotItem component', () => {
 
             render(
                 <Router>
-                    <Provider store={appStore} children={undefined}>
+                    <Provider store={appStore}>
                         <RobotItem item={mockRobot} />
                     </Provider>
                 </Router>

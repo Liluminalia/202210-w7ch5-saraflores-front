@@ -36,9 +36,7 @@ describe('Given the hook', () => {
         RobotRepository.prototype.update = jest.fn().mockResolvedValue(mock1);
 
         const wrapper = ({ children }: { children: JSX.Element }) => (
-            <Provider store={appStore} children={undefined}>
-                {children}
-            </Provider>
+            <Provider store={appStore}>{children}</Provider>
         );
 
         // eslint-disable-next-line testing-library/no-render-in-setup
