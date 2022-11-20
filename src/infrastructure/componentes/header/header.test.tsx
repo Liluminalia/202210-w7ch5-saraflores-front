@@ -4,7 +4,7 @@ import { Header } from './header';
 
 describe('Given Header component', () => {
     describe('When we render the component', () => {
-        test('Then it should display "Home"', () => {
+        test('Then it should display "Robots"', () => {
             render(
                 <>
                     <Router>
@@ -12,7 +12,7 @@ describe('Given Header component', () => {
                     </Router>
                 </>
             );
-            const element = screen.getByText(/Home/i);
+            const element = screen.getByText(/Robots/i);
             expect(element).toBeInTheDocument();
         });
     });
