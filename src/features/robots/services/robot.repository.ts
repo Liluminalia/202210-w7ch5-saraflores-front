@@ -20,6 +20,9 @@ export class RobotRepository implements Repository<Robot> {
                 if (response.ok) return response.json();
                 throw this.createError(response);
             })
+            .then((data) => {
+                return data.robots;
+            })
             .catch((error) => {
                 return `${error}`;
             });
